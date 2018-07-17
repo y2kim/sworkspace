@@ -1,2 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.xml.soap.SAAJMetaFactory"/>
+<fullyQualifiedTypeName name="kh.spring.controller.TVController"/>
+<fullyQualifiedTypeName name="kh.spring.tv.LgTV"/>
+<fullyQualifiedTypeName name="kh.spring.factory.TvFactory"/>
+<fullyQualifiedTypeName name="kh.spring.interfaces.Tv"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.AbstractApplicationContext"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
+<fullyQualifiedTypeName name="kh.spring.speaker.SonySpeaker"/>
+<fullyQualifiedTypeName name="kh.spring.interfaces.Speaker"/>
+<fullyQualifiedTypeName name="kh.spring.tv.SamsungTV"/>
+<fullyQualifiedTypeName name="kh.spring.exam.ListBean"/>
+<fullyQualifiedTypeName name="kh.spring.exam.SetBean"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="kh.spring.exam.MapBean"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="kh.spring.exam.QuizBean"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="setBean" class="kh.spring.exam.SetBean">
+		<property name="set">
+			<set>
+				<value>jack</value>
+				<value>jack</value>
+				<value>mike</value>
+				<value>hanlee</value>
+				<value>do</value>
+			</set>
+		</property>
+	</bean>
+
+
+	<bean id="listBean" class="kh.spring.exam.ListBean" >
+		<property name="list">
+			<list>
+				<value>Jack</value>
+				<value>Paul</value>
+				<value>Mike</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="mapBean" class="kh.spring.exam.MapBean">
+		<property name="maps">
+			<map>
+				<entry key="one" value="Jack"/>
+				<entry key="two" value="Tom"/>
+				<entry key="three" value="Suck"/>
+			</map>
+		</property>
+	</bean>
+	
+	
+	<bean id="quizBean" class="kh.spring.exam.QuizBean">
+			<property name="literal" value="1000">
+			
+			</property>
+			<property name="map">
+				<map>
+					<entry key="one" value="Jack"/>
+					<entry key="two" value="Tom"/>
+					<entry key="three" value="Suck"/>
+				</map>
+			</property>
+			<property name="nameList">
+				<list>
+				<value>Jack</value>
+				<value>Paul</value>
+				<value>Mike</value>
+				</list>
+			</property>
+	</bean>
+	
+	
+</beans>

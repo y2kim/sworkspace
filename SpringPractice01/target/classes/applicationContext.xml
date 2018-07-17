@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="tv" class="kh.spring.tv.SamsungTV" lazy-init="true" init-method="init" destroy-method="destroy"> 
+		<!--  순서 중요  value 리터럴  ref 참조   -->
+		<property name="price" value="1000"/>
+		<property name="speaker" ref="speaker"/>
+	<!-- <constructor-arg value="1000"/>
+		<constructor-arg ref="speaker"></constructor-arg>-->
+		<!-- 기본 : 싱글톤  prototype 붙이면 싱글톤 취소됨  scope="prototype" 반복때 주소값이 유지냐 변경이냐 -->
+		<!-- init-method= 싱글톤이라  한번만 뜨지만 싱글톤이 취소되면 여러번 뜬다    프로토타입 상태 일때 주의   지금까진 생성자 -->
+		<!-- setter 형식 -->
+	</bean>
+	<!-- ioc 실행하면  인스턴스가 만들어 진다  외부에서 값 가져오는 방식만 달라짐 -->
+	<!--  <bean id="lgtv" class="kh.spring.tv.LgTV"/> -->
+	<bean id="speaker" class="kh.spring.speaker.SonySpeaker"/>
+</beans>
