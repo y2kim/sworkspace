@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+	<!-- dispather 노는거라 id 줄 필요가 없 -->
+		<property name="mappings">
+			<!-- 에는 setter  -->
+			<props>
+				<!-- property 라는 클래스  -->
+				<prop key="input.do">
+					input
+					<!-- dispatcher 커맨드 떼네고  그작업      key : value  -->
+				</prop>
+				
+				<prop key="output.do">
+					output
+				</prop>
+				
+				<prop key="index.do">
+					index
+				</prop>
+				
+				<prop key="inputProc.do">
+					inputProc
+				</prop>
+			</props>
+		</property>
+	</bean>
+	<!-- new 을 안해도 인스턴스 생성 한다는것을 받아들여라 xml  -->
+	<bean id="input" class="kh.spring.controller.InputContoller">
+			<!-- mav dispatcher return  -->
+	</bean>
+	<bean id="output" class="kh.spring.controller.OutputController">	
+	</bean>
+	
+	<bean id="index" class="kh.spring.controller.IndexContorller">
+	</bean>
+	
+	<bean id="inputProc" class="kh.spring.controller.InputProcController">
+	</bean>
+	
+	<context:component-scan base-package="kh.spring"></context:component-scan>
+	
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"></property>
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"></property>
+		<property name="username" value="kh"></property>
+		<property name="password" value="kh"></property>
+	</bean>
+	
+	
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	
+	
+</beans>
