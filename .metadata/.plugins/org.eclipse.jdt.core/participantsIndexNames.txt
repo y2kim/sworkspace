@@ -3,5 +3,7 @@ D:\Spring\sworkspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\35789
 \SpringPracitce02\src\main\java
 D:\Spring\sworkspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\939749573.index
 \SpringPractice01\src\main\java
+D:\Spring\sworkspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3279968806.index
+\MessagesWithSpring\src\main\java
 D:\Spring\sworkspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\634167655.index
 \SpringPractice03\src\main\java

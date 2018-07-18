@@ -2,4 +2,6 @@
 <aop-reference-model>
 <aop-project name="SpringPracitce02"/>
 <aop-project name="SpringPractice01"/>
+<aop-project name="SpringPractice03"/>
+<aop-project name="MessagesWithSpring"/>
 </aop-reference-model>
