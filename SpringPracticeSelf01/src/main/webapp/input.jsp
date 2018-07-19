@@ -53,6 +53,7 @@
 	<div id="wrapper">
 		<div id="div-input">
 		<form action="inputProc.do" id="tospring" method="post">
+			<input type="hidden" name="hidden" value="hidden" id="hidden">
 			<div id="div-writter">
 				<input type="text" placeholder="input writer" name="writer">
 			</div>

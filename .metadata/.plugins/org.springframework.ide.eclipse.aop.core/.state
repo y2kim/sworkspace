@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
+<aop-project name="SpringPracticeSelf01"/>
 <aop-project name="SpringPracitce02"/>
 <aop-project name="SpringPractice01"/>
 <aop-project name="SpringPractice03"/>
 <aop-project name="MessagesWithSpring"/>
+<aop-project name="SpringPractice04"/>
 </aop-reference-model>
