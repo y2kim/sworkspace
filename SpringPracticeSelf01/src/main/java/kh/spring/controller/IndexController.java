@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -37,6 +38,7 @@ public class IndexController {
 	
 //	@RequestMapping("/inputProc.do")
 //	public ModelAndView toInputProc(HttpServletRequest req, HttpServletResponse res) {
+	// session 필요 하면 session 추가  HttpSession
 //		ModelAndView mav = new ModelAndView();
 //		String writer = req.getParameter("writer");
 //		String contents = req.getParameter("contents");
@@ -50,7 +52,8 @@ public class IndexController {
 
 	
 	@RequestMapping("/inputProc.do")
-	public ModelAndView toInputProc(String hidden , MessagesDTO dto) {
+	public ModelAndView toInputProc(String hidden , MessagesDTO dto ) {
+		
 		// DTO 값에 들어 있지 않는 값을 받을때는  @RequestParam 이용해 값을 받는다     // @ModelAttribute
 		// @RequestParam  안 붙여도 이름이 같다면 출력이 된다 
 		System.out.println(hidden);
