@@ -2,8 +2,10 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 	
 <!-- 	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
 		<property name="mappings">
@@ -70,7 +72,17 @@
 	</bean>
 	
 	<bean id="JdbcTemplete" class="org.springframework.jdbc.core.JdbcTemplate">
+			<!-- 라이프 사이클,close 까진 해준다  + 편리성 제공-->
 	 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
+	
+	
+	<!-- 트랜잭션 전용 빈  -->
+	<bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+	<!-- 커밋 롤백 관련 있으므로  dataSource 연결 ㅣ켜야함 result set , etc ...  커밋 -->
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	<tx:annotation-driven/>
+	<!-- 어노테이션 방식   컴포넌트 스캔 방식 -->
 	
 </beans>
