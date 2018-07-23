@@ -4,6 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
+import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -16,14 +17,40 @@ import kh.spring.interfaces.MessagesDAO;
 public class MessgesDAOImpl implements MessagesDAO {
 	
 	@Autowired
-	private JdbcTemplate template;
+	//private JdbcTemplate template;	
+	private SqlSessionTemplate template;
+
+	@Override
+	public int insertMessages(MessagesDTO dto) {
+		
+		return template.insert("Messages.insert",dto);
+	}
+
+	@Override
+	public int deleteMessages(int seq) {
+		
+		return template.delete("Messages.delete",seq);
+	}
+
+	@Override
+	public int modifyMessages(MessagesDTO dto) {
+		
+		return template.update("Messages.update", dto);
+	}
+
+	@Override
+	public List<MessagesDTO> getAllData() {
+		// TODO Auto-generated method stub
+		return template.selectList("Messages.selectAll");
+	}
 	
+/*	
 	@Override
 	public int insertMessages(MessagesDTO dto) {
 		String sql = "insert into messages values(messages_seq.nextval,?,?)";
-		if(dto.getSeq() == -1) {
-			return template.update(sql, dto.getWriter(),dto.getContents());
-		}
+//		if(dto.getSeq() == -1) {
+//			return template.update(sql, dto.getWriter(),dto.getContents());
+//		}
 		return template.update(sql, dto.getWriter(),dto.getContents());
 	}
 
@@ -76,6 +103,9 @@ public class MessgesDAOImpl implements MessagesDAO {
 			
 		});
 	}
-	
+	jdbctemplet 방식 
+	*/
 
+	
+	
 }

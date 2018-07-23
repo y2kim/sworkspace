@@ -88,6 +88,19 @@
 	<!-- 어노테이션으로  떠너김    -->
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
+	
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
+	<!-- getsestion -->
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="mapperLocations" value="classpath:/mapper/**/*mapper.xml"></property>
+		<!-- ** 모든것 -->
+		<property name="configLocation" value="classpath:/mybatis-config.xml"></property>
+	</bean>
+	
+	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSession"></constructor-arg>
+	</bean>
+	
 	<tx:annotation-driven/>
 	<!-- 어노테이션 방식   컴포넌트 스캔 방식 -->
 	

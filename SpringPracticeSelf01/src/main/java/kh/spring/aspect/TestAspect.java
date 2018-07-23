@@ -1,6 +1,8 @@
 package kh.spring.aspect;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -37,13 +39,69 @@ public class TestAspect {
 //		System.out.println(System.currentTimeMillis() +"insert가 실행되었습니다 log");
 //	}
 	
-	@Before("getInsertPointCut()")
-	public void printHelloView(JoinPoint jp) {
-		//JoinPoint
-		MessagesDTO dto = (MessagesDTO)jp.getArgs()[0];
-		dto.setContents(EncrpyUtils.getSha256(dto.getContents()));
+//	@Before("getInsertPointCut()")
+//	public void printHelloView(JoinPoint jp) {
+//		//성공적인 암호화  기본설정 
+//		MessagesDTO dto = (MessagesDTO)jp.getArgs()[0];
+//		dto.setContents(EncrpyUtils.getSha256(dto.getContents()));
+//		// 주소값이 같아서  값이 변함   call by value  ,ref 문제 
+//		// 컨트롤러에서 DTO 일경우에만 됨 
+//		// 리턴하는건 의미가 없다는 문제가 있음     주소를  지워버리기 때문에   Call by ref 관련 이야기 
+//		//  횡단 관심사라는 것을 기억을 해야함  ARound 
+//	}
+	
+//	@Before("getInsertPointCut()")
+//	public void printHelloView(JoinPoint jp) {
+//		//JoinPoinㅅ
+//		String contents = jp.getArgs()[1].toString();
+//		//오버헤드만 일어남 
+	//  이지역에서 사라져 버린다
+//		contents = EncrpyUtils.getSha256(contents);
+//	}
+
+	@Around("getInsertPointCut()")
+	public int printHelloView(ProceedingJoinPoint pjp) {
+		// Around 방식
+		MessagesDTO dto = (MessagesDTO) pjp.getArgs()[0];
+		
+		// 현재 cbv 
+		dto.setContents(EncrpyUtils.getSha256(dto.getContents())); 
+		int result = 0;
+		// 서비스 이전 
+		try {
+			result =  (Integer) pjp.proceed(new Object[] {dto});
+		} catch (Throwable e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		// 기준으로  위로는 Before  밑으로는 after /  타이밍을 정할수 있음 / 결과을  끼어넣을수 있음 / return은 안됨 
+		// 변조 가능   오브젝트로 돌려 보넴    /cbv cbr  관련없음 
+		
+		return result;
+		// 컨트롤러에 넘어간다 
+		//Around 특징 :  대상 타켓 리턴 타입과 동일해야함  // 관여영역  
 	}
 	
-	
-	
+//	@Around("getInsertPointCut()")
+//	public Boolean printHelloView(ProceedingJoinPoint pjp) {
+//		// Around 방식  String 방식으로 넘길때  
+//		String id = pjp.getArgs()[0].toString();
+//		String pw = pjp.getArgs()[1].toString();
+//		// 현재 cbv 
+//		pw = EncrpyUtils.getSha256(pw);
+//		Boolean result = false;
+//		// 서비스 이전 
+//		try {
+//			result = (Boolean) pjp.proceed(new Object[] {id,pw});
+//		} catch (Throwable e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} 
+//		// 기준으로  위로는 Before  밑으로는 after /  타이밍을 정할수 있음 / 결과을  끼어넣을수 있음 / return은 안됨 
+//		// 변조 가능   오브젝트로 돌려 보넴    /cbv cbr  관련없음 
+//		
+//		return result;
+//		// 컨트롤러에 넘어간다 
+//		//Around 특징 :  대상 타켓 리턴 타입과 동일해야함  // 관여영역  
+//	}
 }

@@ -22,7 +22,7 @@ public class MessagesSevicesImpl implements MessagesServices {
 	//2개이상 작업이 껴있는  경우 트랜잭션 사용 
 	public int insertMessages(MessagesDTO dto) {
 		System.out.println("insert 실행 완료");
-		dto.setSeq(-1);
+		//dto.setSeq(-1);
 		return dao.insertMessages(dto);
 	}
 
