@@ -57,17 +57,25 @@ public class IndexController {
 		// DTO 값에 들어 있지 않는 값을 받을때는  @RequestParam 이용해 값을 받는다     // @ModelAttribute
 		// @RequestParam  안 붙여도 이름이 같다면 출력이 된다 
 		System.out.println(hidden);
-		int result = service.insertMessages(dto);
+		int result =0 ;
 		ModelAndView mav = new ModelAndView();
-		mav.addObject("result",result);
-		mav.setViewName("inputProcView.jsp");
+		try {
+		 result = service.insertMessages(dto);	
+		 mav.addObject("result",result);
+		 mav.setViewName("inputProcView.jsp");
+		}catch (Exception e) {
+		e.printStackTrace();
+		mav.setViewName("error.jsp");
+		}
 		return mav;
 	}
 	
 	@RequestMapping("/output.do")
 		public ModelAndView toOutput(){
 		ModelAndView mav = new ModelAndView();
-		List<MessagesDTO> list = service.selectMessages();
+		
+		List<MessagesDTO> list = service.getAllData();
+		
 		mav.addObject("list", list);
 		mav.setViewName("output.jsp");
 		return mav;
@@ -82,7 +90,9 @@ public class IndexController {
 	public ModelAndView toDeltePtoc(int seq) throws Exception {
 		
 		ModelAndView mav = new ModelAndView();
+		
 		int result = service.deleteMessages(seq);
+		
 		mav.addObject("result",result);
 		mav.setViewName("deleteProcView.jsp");
 		return mav;
@@ -97,7 +107,9 @@ public class IndexController {
 	public ModelAndView toUpdateProc(MessagesDTO dto) throws Exception {
 		
 		ModelAndView mav = new ModelAndView();
+		
 		int result = service.modifyMessages(dto);
+		
 		mav.addObject("result",result);
 		mav.setViewName("modifyProcView.jsp");
 		return mav;

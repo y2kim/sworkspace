@@ -9,7 +9,8 @@ import kh.spring.dto.MessagesDTO;
 
 public interface MessagesServices  {
 	public int insertMessages(MessagesDTO dto);
-	public List<MessagesDTO> selectMessages();
+	//public List<MessagesDTO> selectMessages();
 	public int deleteMessages(int seq);
 	public int modifyMessages(MessagesDTO dto);
+	public List<MessagesDTO> getAllData();
 }
