@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="kh.spring.speaker.SonySpeaker"/>
-<fullyQualifiedTypeName name="kh.spring.interfaces.Speaker"/>
 <fullyQualifiedTypeName name="kh.spring.tv.SamsungTV"/>
 <fullyQualifiedTypeName name="kh.spring.exam.ListBean"/>
 <fullyQualifiedTypeName name="kh.spring.exam.SetBean"/>
@@ -60,4 +58,6 @@
 <fullyQualifiedTypeName name="kh.security.util.EncrpyUtils"/>
 <fullyQualifiedTypeName name="org.aspectj.lang.annotation.Around"/>
 <fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="org.mybatis.spring.SqlSessionTemplate"/>
+<fullyQualifiedTypeName name="javax.xml.transform.Templates"/>
 </qualifiedTypeNameHistroy>
