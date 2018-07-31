@@ -44,5 +44,11 @@
 		<url-pattern>/</url-pattern>
 		<!-- /*  <- jsp 까지 가게 되어 / 이거만 사용한다  -->
 	</servlet-mapping>
-
+	
+	<!--  환영 파일  -   // localhost  만 치면 됨  // web-inf 내부안에 집어 넣고 
+	<welcome-file-list>
+		<welcome-file>/WEB-INF/views/index.jsp</welcome-file>
+	</welcome-file-list>
+	-->
+	
 </web-app>

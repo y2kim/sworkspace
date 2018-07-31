@@ -62,7 +62,7 @@ public class IndexController {
 		try {
 		 result = service.insertMessages(dto);	
 		 mav.addObject("result",result);
-		 mav.setViewName("inputProcView.jsp");
+		 mav.setViewName("inputProcView");
 		}catch (Exception e) {
 		e.printStackTrace();
 		mav.setViewName("error.jsp");
@@ -73,11 +73,9 @@ public class IndexController {
 	@RequestMapping("/output.do")
 		public ModelAndView toOutput(){
 		ModelAndView mav = new ModelAndView();
-		
 		List<MessagesDTO> list = service.getAllData();
-		
 		mav.addObject("list", list);
-		mav.setViewName("output.jsp");
+		mav.setViewName("output");
 		return mav;
 	}
 	
@@ -94,7 +92,7 @@ public class IndexController {
 		int result = service.deleteMessages(seq);
 		
 		mav.addObject("result",result);
-		mav.setViewName("deleteProcView.jsp");
+		mav.setViewName("deleteProcView");
 		return mav;
 	}
 	
@@ -111,7 +109,7 @@ public class IndexController {
 		int result = service.modifyMessages(dto);
 		
 		mav.addObject("result",result);
-		mav.setViewName("modifyProcView.jsp");
+		mav.setViewName("modifyProcView");
 		return mav;
 	}
 }
