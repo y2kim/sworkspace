@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
 <title>Insert title here</title>
 <style data-aphrodite="data-aphrodite">
 ._1u7z0lk {
@@ -128,9 +128,11 @@
 ._10p0m0gl::-ms-expand {
 	display: none !important;
 }
+
 ._10p0m0gl:focus {
 	outline: none !important;
 }
+
 ._1pzmvmb {
 	position: absolute !important;
 	top: 16px !important;
@@ -138,10 +140,12 @@
 	line-height: 0 !important;
 	pointer-events: none !important;
 }
+
 ._9hxttoo {
 	display: block !important;
 	width: 100% !important;
 }
+
 ._rin72m {
 	background: transparent !important;
 	border: 0px !important;
@@ -149,6 +153,7 @@
 	display: block !important;
 	padding: 0px !important;
 }
+
 ._1n57hdr7 {
 	font-weight: 600 !important;
 	margin: 0px !important;
@@ -163,6 +168,7 @@
 	padding-top: undefined !important;
 	padding-bottom: undefined !important;
 }
+
 ._195jdbyw {
 	-webkit-appearance: none !important;
 	-moz-appearance: none !important;
@@ -186,12 +192,15 @@
 	color: #DBDBDB !important;
 	background-color: #F2F2F2 !important;
 }
+
 ._195jdbyw::-ms-expand {
 	display: none !important;
 }
+
 ._195jdbyw:focus {
 	outline: none !important;
 }
+
 ._1n0q8zmp {
 	font-weight: 600 !important;
 	margin: 0px !important;
@@ -206,14 +215,17 @@
 	padding-bottom: undefined !important;
 	color: #767676 !important;
 }
+
 @media print {
 	._1n0q8zmp {
 		color: #484848 !important;
 	}
 }
+
 ._107ja4p {
 	float: right !important;
 }
+
 @media ( min-width : 744px) {
 	._1dcqn1vg {
 		margin-top: 0px !important;
@@ -222,6 +234,7 @@
 		margin-right: 0px !important;
 	}
 }
+
 ._5rte3y6 {
 	cursor: pointer !important;
 	display: inline-block !important;
@@ -257,30 +270,36 @@
 	border-color: transparent !important;
 	color: #ffffff !important;
 }
+
 ._5rte3y6:hover {
 	background: #008489 !important;
 	border-color: transparent !important;
 	color: #ffffff !important;
 }
+
 ._5rte3y6:active {
 	background: #006a70 !important;
 	border-color: transparent !important;
 	color: #ffffff !important;
 }
+
 ._5rte3y6:disabled {
 	background: rgba(0, 132, 137, 0.3) !important;
 	border-color: transparent !important;
 	color: #ffffff !important;
 	cursor: default !important;
 }
+
 ._5rte3y6::-moz-focus-inner {
 	border: 0px !important;
 	padding: 0px !important;
 	margin: 0px !important;
 }
+
 ._5rte3y6:focus::-moz-focus-inner {
 	border: 1px dotted #ffffff !important;
 }
+
 ._cgr7tc7 {
 	font-size: 16px !important;
 	line-height: 22px !important;
@@ -293,6 +312,7 @@
 	padding-bottom: undefined !important;
 }
 </style>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 </head>
 <body>
 	<div id="lys-redesign-div">
@@ -322,9 +342,7 @@
 							<div>
 								<div class="progress-bar__container">
 									<div class="progress-section progress-bar__placeholder"></div>
-									<div>
-								
-									</div>
+									<div></div>
 								</div>
 							</div>
 						</div>
@@ -350,14 +368,15 @@
 												<div class="select-block select-jumbo">
 													<div class="_9hxttoo">
 														<div style="margin-bottom: 8px">
-															<label class="_rin72m" for="property-type-group"><div
-																	class="_1n57hdr7"></div></label>
+															<label class="_rin72m" for="property-type-group">
+															<div class="_1n57hdr7"></div>
+															</label>
 														</div>
 														<div class="_az0uecb">
 															<div class="_y9ev9r">
 																<select id="property-type-group"
 																	name="property-type-group" class="_10p0m0gl"><option
-																		selected="" value="0" disabled="">하나를 선택해주세요.</option>
+																		selected="selected" value="0" disabled="disabled">하나를 선택해주세요.</option>
 																	<option value="apartments">아파트</option>
 																	<option value="houses">주택</option>
 																	<option value="secondary_units">별채</option>
@@ -369,10 +388,10 @@
 															<span class="_1pzmvmb"><svg viewBox="0 0 18 18"
 																	role="presentation" aria-hidden="true"
 																	focusable="false"
-																	style="height:16px;width:16px;display:block;fill:#484848">
+																	style="height: 16px; width: 16px; display: block; fill: #484848">
 																<path
-																	d="m16.29 4.3a1 1 0 1 1 1.41 1.42l-8 8a1 1 0 0 1 -1.41 0l-8-8a1 1 0 1 1 1.41-1.42l7.29 7.29z"
-																	fill-rule="evenodd"></path></svg></span>
+																		d="m16.29 4.3a1 1 0 1 1 1.41 1.42l-8 8a1 1 0 0 1 -1.41 0l-8-8a1 1 0 1 1 1.41-1.42l7.29 7.29z"
+																		fill-rule="evenodd"></path></svg></span>
 														</div>
 													</div>
 												</div>
@@ -392,42 +411,75 @@
 																<div class="_y9ev9r">
 																	<select id="property-type-category"
 																		name="property-type-category" class="_195jdbyw"
-																		disabled=""><option selected="" value="0"
-																			disabled="">건물 유형 선택</option>
-																			<option value="houses">주택</option>
-																			</select>
+																		disabled="disabled"><option selected="selected" value="0"
+																			disabled="disabled">건물 유형 선택</option>
+																		<option value="houses">주택</option>
+																	</select>
 																</div>
-																<span class="_1pzmvmb" ><svg id="pickme" viewBox="0 0 18 18"
-																		role="presentation" aria-hidden="true"
-																		focusable="false"
-																		style="height:16px;width:16px;display:block;fill:#DBDBDB">
+																<span class="_1pzmvmb"><svg id="pickme"
+																		viewBox="0 0 18 18" role="presentation"
+																		aria-hidden="true" focusable="false"
+																		style="height: 16px; width: 16px; display: block; fill: #DBDBDB">
 																	<path
-																		d="m16.29 4.3a1 1 0 1 1 1.41 1.42l-8 8a1 1 0 0 1 -1.41 0l-8-8a1 1 0 1 1 1.41-1.42l7.29 7.29z"
-																		fill-rule="evenodd"></path></svg></span>
+																			d="m16.29 4.3a1 1 0 1 1 1.41 1.42l-8 8a1 1 0 0 1 -1.41 0l-8-8a1 1 0 1 1 1.41-1.42l7.29 7.29z"
+																			fill-rule="evenodd"></path></svg></span>
 															</div>
 														</div>
 													</div>
 												</div>
-												<div id="property-type-definition" class="_1n0q8zmp"></div>
+												<div id="property-type-definition" class="_1n0q8zmp" ></div>
+											</div>
+											<div style="margin-top: 32px; margin-bottom: 32px; visibility:hidden;" id="sleeptype"  >
+													<div class="_1thhkotp">
+														<span>게스트가 묵게 될 숙소 유형을 골라주세요.</span>
+													</div>
+												<div style="margin-bottom: 8px;  margin-bottom: 16px">
+													<div class="select-block select-jumbo">
+														<div class="_9hxttoo">
+															<div style="margin-bottom: 8px;">
+																<label class="_rin72m" for="room-type"><div
+																		class="_1n57hdr7"></div></label>
+															</div>
+															<div class="_az0uecb">
+																<div class="_y9ev9r">
+																	<select id="room-type" name="room_type"  hidden="true" 
+																		class="_10p0m0gl" ><option value="entire_home">집
+																			전체</option>
+																		<option value="private_room">개인실</option>
+																		<option value="shared_room">다인실</option></select>
+																</div>
+																<span class="_1pzmvmb"><svg id="pickme"
+																		viewBox="0 0 18 18" role="presentation"
+																		aria-hidden="true" focusable="false"
+																		style="height: 16px; width: 16px; display: block; fill: #484848">
+																	<path
+																			d="m16.29 4.3a1 1 0 1 1 1.41 1.42l-8 8a1 1 0 0 1 -1.41 0l-8-8a1 1 0 1 1 1.41-1.42l7.29 7.29z"
+																			fill-rule="evenodd"></path></svg></span>
+															</div>
+														</div>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
+									
 									<div class="main-panel__actions-wrapper">
 										<div class="centered-content clearfix">
 											<div class="bg-white main-panel-outer-half clearfix shadowed">
 												<div
-													class="no-margin-padding__sm main-panel-padding main-panel-progress pull-right main-panel-inner-half space-sm-8">
+													class="no-margin-padding__sm main-panel-padding main-panel-progress main-panel-inner-half space-sm-8">
 													<div class="divider hide-sm"></div>
 													<div class="row no-margin-padding__sm">
-														<div 
+														<div
 															class="main-panel__actions col-sm-12 no-margin-padding__sm">
 															<div class="_1dcqn1vg"
 																style="margin-top: 16px; margin-bottom: 16px; margin-left: 16px; margin-right: 16px">
 																<a href="/become-a-host" class="_5rte3y6"
 																	aria-busy="false"><span class="_cgr7tc7"><span>뒤로</span></span></a>
 																<div class="_107ja4p">
-																	<button type="button" id="nextpg" disabled="" class="_5rte3y6"
-																		aria-busy="false" data-veloute="lys-next-button">
+																	<button type="button" id="nextpg" disabled="disabled"
+																		class="_5rte3y6" aria-busy="false"
+																		data-veloute="lys-next-button">
 																		<span class="_cgr7tc7"><span>다음</span></span>
 																	</button>
 																</div>
@@ -450,48 +502,8 @@
 			</div>
 		</div>
 	</div>
-<script type="text/javascript">
+	<script type="text/javascript">
 
-var sherlock_firstbyte = window.performance && window.performance.timing
-? window.performance.timing.responseStart
-: Number(new Date());
-!function(){if(window.PerformanceLongTaskTiming){var g=window.__tti={e:[]};
-g.o=new PerformanceObserver(function(l){g.e=g.e.concat(l.getEntries())});
-g.o.observe({entryTypes:['longtask']})}}();
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-//Block google analytics if the url includes an email
-var re = /(([^<>()\[\\.,;:\s@"]+(\.[^<>()\[\\.,;:\s@"]+)*)|(".+"))(@|%40|%2540)((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([-a-zA-Z0-9]+\.)+[a-zA-Z]{2,}))/;
-
-if (!re.test(location.href)) {
-ga('create', 'UA-2725447-1', 'auto', {allowLinker:true, useAmpClientId:true});
-ga('require', 'linker');
-ga('linker:autoLink', ['airbnb.']);
-ga('require', 'displayfeatures');
-ga('send', 'pageview');
-}
-
-// https://github.com/GoogleChromeLabs/first-input-delay
-(function(){function g(a,b){d||(d=!0,f=a,h=b,k.forEach(function(a){removeEventListener(a,l,e)}),m())}function m(){d&&0<c.length&&(c.forEach(function(a){a(f,h)}),c=[])}function n(a,b){function c(){g(a,b);f()}function d(){f()}function f(){removeEventListener("pointerup",c,e);removeEventListener("pointercancel",d,e)}addEventListener("pointerup",c,e);addEventListener("pointercancel",d,e)}function l(a){if(a.cancelable){var b=a.timeStamp;b=Math.max((1E12<b?+new Date:performance.now())-b,0);"pointerdown"==
-a.type?n(b,a):g(b,a)}}var e={passive:!0,capture:!0},k=["click","mousedown","keydown","touchstart","pointerdown"],d=!1,f,h,c=[];k.forEach(function(a){addEventListener(a,l,e)});window.perfMetrics=window.perfMetrics||{};window.perfMetrics.onFirstInputDelay=function(a){c.push(a);m()}})();
-
-perfMetrics.onFirstInputDelay(function(delay, evt) {
-if (typeof ga === 'undefined') {
-return;
-}
-ga('send', 'event', {
-eventCategory: 'Perf Metrics',
-eventAction: 'first-input-delay',
-eventLabel: evt.type,
-// Event values must be an integer.
-eventValue: Math.round(delay),
-// Exclude this event from bounce rate calculations.
-nonInteraction: true,
-});
-});
 
 	
 /*     $("#property-type-group").change(function() {
@@ -551,24 +563,38 @@ nonInteraction: true,
 						 + "<option value=\"goodapart\">"+"고급아파트"+"</option>")				 
 					}else if(housetype == "houses"){
 						$("#property-type-category").html("<option selected=\"\" value=\"0\" disabled=\"\">건물 유형 선택</option>" 
-								 + "<option value=\"apartments\">"+housetype+"</option>");
+								 + "<option value=\"house\">"+"하우스"+"</option>"   
+								 + "<option value=\"detached_house\">"+"단독주택"+"</option>"
+								 + "<option value=\"apartment_house\">"+"공동주택"+"</option>" 
+								 + "<option value=\"residence\">"+"저택"+"</option>" );
 					}else if(housetype == "secondary_units"){
 						$("#property-type-category").html("<option selected=\"\" value=\"0\" disabled=\"\">건물 유형 선택</option>" 
-								 + "<option value=\"apartments\">"+housetype+"</option>");
+								 + "<option value=\"separate\">"+"별채"+"</option>" 
+								 + "<option value=\"farm\">"+"농촌"+"</option>" 
+								 );
 					}else if(housetype == "unique_homes"){
 						$("#property-type-category").html("<option selected=\"\" value=\"0\" disabled=\"\">건물 유형 선택</option>" 
-								 + "<option value=\"apartments\">"+housetype+"</option>");
+								+ "<option value=\"igloo\">"+"이글루"+"</option>"
+								+ "<option value=\"log\">"+"통나무집"+"</option>"
+								+ "<option value=\"tent\">"+"텐트"+"</option>"
+								+ "<option value=\"campingcar\">"+"캠핑카"+"</option>"
+								 );
 					}else if(housetype == "bnb"){
 						$("#property-type-category").html("<option selected=\"\" value=\"0\" disabled=\"\">건물 유형 선택</option>" 
-								 + "<option value=\"apartments\">"+housetype+"</option>");
+								+ "<option value=\"bnb\">"+"비앤비"+"</option>"
+								+ "<option value=\"crazyacade\">"+"크레이지아케이드"+"</option>"
+								+ "<option value=\"fortress2\">"+"포트리스2"+"</option>"
+								 );
 					}else if(housetype == "boutique_hotels_and_more"){
 						$("#property-type-category").html("<option selected=\"\" value=\"0\" disabled=\"\">건물 유형 선택</option>" 
-								 + "<option value=\"apartments\">"+housetype+"</option>");
+								+ "<option value=\"hotel\">"+"호텔"+"</option>"
+								+ "<option value=\"boutique\">"+"부티크"+"</option>"
+								+ "<option value=\"motel\">"+"모텔"+"</option>"
+								+ "<option value=\"resote\">"+"리조트"+"</option>" 
+								);
 					}
 					
-						 
-						
-					
+						 	
 				},
 				error:function(request,status,error){
 					console.log(request.status+":"+status.responseText+":"+ error);
@@ -582,6 +608,7 @@ nonInteraction: true,
 	
 	
 	$("#property-type-category").change(function() {
+		$("#sleeptype").css("visibility","visible");
 		$("#nextpg").attr("disabled",false);
 	});
 	  

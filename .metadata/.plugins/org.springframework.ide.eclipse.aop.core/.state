@@ -7,11 +7,11 @@
 <aop-reference advice-type="AROUND" bean="1:BeansModel|2:SpringPracticeSelf01|3:src/main/webapp/WEB-INF/context.xml|7:beans:10|8:messagesSevicesImpl:10" bean-file="/SpringPracticeSelf01/src/main/webapp/WEB-INF/context.xml" bean-start-line="10" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/SpringPracticeSelf01/src/main/webapp/WEB-INF/context.xml" source="=SpringPracticeSelf01/C:\/Users\/user1\/.m2\/repository\/org\/springframework\/spring-tx\/5.0.6.RELEASE\/spring-tx-5.0.6.RELEASE.jar&lt;org.springframework.transaction.interceptor(TransactionInterceptor.class[TransactionInterceptor~invoke~Lorg.aopalliance.intercept.MethodInvocation;" source-start-line="-1" target="=SpringPracticeSelf01/src\/main\/java&lt;kh.spring.impl{MessagesSevicesImpl.java[MessagesSevicesImpl~modifyMessages~QMessagesDTO;" target-start-line="45"/>
 <aop-reference advice-type="AROUND" bean="1:BeansModel|2:SpringPracticeSelf01|3:src/main/webapp/WEB-INF/context.xml|7:beans:10|8:messagesSevicesImpl:10" bean-file="/SpringPracticeSelf01/src/main/webapp/WEB-INF/context.xml" bean-start-line="10" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/SpringPracticeSelf01/src/main/webapp/WEB-INF/context.xml" source="=SpringPracticeSelf01/C:\/Users\/user1\/.m2\/repository\/org\/springframework\/spring-tx\/5.0.6.RELEASE\/spring-tx-5.0.6.RELEASE.jar&lt;org.springframework.transaction.interceptor(TransactionInterceptor.class[TransactionInterceptor~invoke~Lorg.aopalliance.intercept.MethodInvocation;" source-start-line="-1" target="=SpringPracticeSelf01/src\/main\/java&lt;kh.spring.impl{MessagesSevicesImpl.java[MessagesSevicesImpl~getAllData" target-start-line="52"/>
 </aspect-definition>
-<aspect-definition advice-class-name="kh.spring.aspect.TestAspect" advice-method-name="printHello" advice-type="BEFORE" aspect-end-line-number="69" aspect-name="testAspect" aspect-start-line-number="67" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/SpringPracticeSelf01/src/main/webapp/WEB-INF/context.xml" pointcut-expression="getPointCut()" proxy-target-class="false">
-<aop-reference advice-type="BEFORE" bean="1:BeansModel|2:SpringPracticeSelf01|3:src/main/webapp/WEB-INF/context.xml|7:beans:10|8:messagesSevicesImpl:10" bean-file="/SpringPracticeSelf01/src/main/webapp/WEB-INF/context.xml" bean-start-line="10" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/SpringPracticeSelf01/src/main/webapp/WEB-INF/context.xml" source="=SpringPracticeSelf01/src\/main\/java&lt;kh.spring.aspect{TestAspect.java[TestAspect~printHello" source-start-line="29" target="=SpringPracticeSelf01/src\/main\/java&lt;kh.spring.impl{MessagesSevicesImpl.java[MessagesSevicesImpl~getAllData" target-start-line="52"/>
-</aspect-definition>
 <aspect-definition advice-class-name="kh.spring.aspect.TestAspect" advice-method-name="printHelloView(org.aspectj.lang.ProceedingJoinPoint)" advice-type="AROUND" aspect-end-line-number="69" aspect-name="testAspect" aspect-start-line-number="67" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/SpringPracticeSelf01/src/main/webapp/WEB-INF/context.xml" pointcut-expression="getInsertPointCut()" proxy-target-class="false">
 <aop-reference advice-type="AROUND" bean="1:BeansModel|2:SpringPracticeSelf01|3:src/main/webapp/WEB-INF/context.xml|7:beans:10|8:messagesSevicesImpl:10" bean-file="/SpringPracticeSelf01/src/main/webapp/WEB-INF/context.xml" bean-start-line="10" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/SpringPracticeSelf01/src/main/webapp/WEB-INF/context.xml" source="=SpringPracticeSelf01/src\/main\/java&lt;kh.spring.aspect{TestAspect.java[TestAspect~printHelloView~QProceedingJoinPoint;" source-start-line="63" target="=SpringPracticeSelf01/src\/main\/java&lt;kh.spring.impl{MessagesSevicesImpl.java[MessagesSevicesImpl~insertMessages~QMessagesDTO;" target-start-line="23"/>
+</aspect-definition>
+<aspect-definition advice-class-name="kh.spring.aspect.TestAspect" advice-method-name="printHello" advice-type="BEFORE" aspect-end-line-number="69" aspect-name="testAspect" aspect-start-line-number="67" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/SpringPracticeSelf01/src/main/webapp/WEB-INF/context.xml" pointcut-expression="getPointCut()" proxy-target-class="false">
+<aop-reference advice-type="BEFORE" bean="1:BeansModel|2:SpringPracticeSelf01|3:src/main/webapp/WEB-INF/context.xml|7:beans:10|8:messagesSevicesImpl:10" bean-file="/SpringPracticeSelf01/src/main/webapp/WEB-INF/context.xml" bean-start-line="10" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/SpringPracticeSelf01/src/main/webapp/WEB-INF/context.xml" source="=SpringPracticeSelf01/src\/main\/java&lt;kh.spring.aspect{TestAspect.java[TestAspect~printHello" source-start-line="29" target="=SpringPracticeSelf01/src\/main\/java&lt;kh.spring.impl{MessagesSevicesImpl.java[MessagesSevicesImpl~getAllData" target-start-line="52"/>
 </aspect-definition>
 </aop-project>
 <aop-project name="Calendar"/>
@@ -25,10 +25,11 @@
 </aspect-definition>
 </aop-project>
 <aop-project name="NewChatProgram"/>
-<aop-project name="MessagesWithSpring"/>
-<aop-project name="SpringPractice01"/>
-<aop-project name="SpringPractice03"/>
 <aop-project name="SpringPractice04"/>
+<aop-project name="Villim"/>
+<aop-project name="SpringPractice03"/>
+<aop-project name="SpringPractice01"/>
+<aop-project name="MessagesWithSpring"/>
 <aop-project name="ChatProgram"/>
 <aop-project name="JsonPractice"/>
 </aop-reference-model>

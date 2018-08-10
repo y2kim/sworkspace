@@ -67,7 +67,7 @@ public class FrontController {
 	
 	
 	@RequestMapping(value = "/listcall.do", method = RequestMethod.GET)
-public void home( @RequestParam("val") String id, HttpServletRequest request , HttpServletResponse response) throws JsonIOException, IOException {
+public @ResponseBody void home( @RequestParam("val") String id, HttpServletRequest request , HttpServletResponse response) throws JsonIOException, IOException {
 	JSONArray jarray = new JSONArray();
 	String valuebulid = id;
 	response.setCharacterEncoding("utf8");
