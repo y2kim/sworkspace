@@ -20,11 +20,10 @@
 
 /* Create a custom checkbox */
 .checkmark {
-    position: absolute;
     top: 0;
     left: 0;
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     background-color: #eee;
 }
 
@@ -110,9 +109,9 @@
 					<div class="list-your-space__content">
 						<div class="centered-content clearfix">
 							<div
-								class="main-panel-container no-padding-h bg-white main-panel-outer-half clearfix">
+								class="main-panel-container no-padding-h bg-white main-panel-outer-half clearfix  col-md-6 col-md-offset-2">
 								<div
-									class="main-panel main-panel-padding main-panel-progress pull-right main-panel-inner-half space-sm-8">
+									class="main-panel main-panel-padding main-panel-progress pull-right main-panel-inner-half space-sm-8 ">
 									<div class="_1mbllh6j">
 										<div class="_492uxj4">어떤 편의시설을 제공하시나요?</div>
 									</div>
@@ -451,7 +450,7 @@
 														class="main-panel__actions col-sm-12 no-margin-padding__sm">
 														<div class="_1dcqn1vg"
 															style="margin-top: 16px; margin-bottom: 16px; margin-left: 16px; margin-right: 16px">
-															<a href="/become-a-host/27615599/location"
+															<a href="/fore.host"
 																class="buttonevn" aria-busy="false"><span
 																class="_cgr7tc7"><span>뒤로</span></span></a>
 															<div class="_107ja4p">

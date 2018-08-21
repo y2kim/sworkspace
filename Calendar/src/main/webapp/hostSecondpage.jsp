@@ -352,9 +352,9 @@
 						<div class="list-your-space__content">
 							<div class="centered-content clearfix">
 								<div
-									class="main-panel-container no-padding-h bg-white main-panel-outer-half clearfix">
+									class="main-panel-container no-padding-h bg-white main-panel-outer-half clearfix col-md-6 landing__left-col">
 									<div
-										class="main-panel main-panel-padding main-panel-progress pull-right main-panel-inner-half space-sm-8">
+										class="main-panel main-panel-padding main-panel-progress  main-panel-inner-half space-sm-8">
 										<div class="_1mbllh6j">
 											<div class="_492uxj4">등록하실 숙소 종류는 무엇인가요?</div>
 										</div>
@@ -474,7 +474,7 @@
 															class="main-panel__actions col-sm-12 no-margin-padding__sm">
 															<div class="_1dcqn1vg"
 																style="margin-top: 16px; margin-bottom: 16px; margin-left: 16px; margin-right: 16px">
-																<a href="/become-a-host" class="_5rte3y6"
+																<a href="/fisrt.host" class="_5rte3y6"
 																	aria-busy="false"><span class="_cgr7tc7"><span>뒤로</span></span></a>
 																<div class="_107ja4p">
 																	<button type="button" id="nextpg" disabled="disabled"
@@ -502,6 +502,9 @@
 			</div>
 		</div>
 	</div>
+	
+	
+	
 	<script type="text/javascript">
 
 
@@ -610,6 +613,10 @@
 	$("#property-type-category").change(function() {
 		$("#sleeptype").css("visibility","visible");
 		$("#nextpg").attr("disabled",false);
+	});
+	
+	$("#nextpg").click(function() {
+		$(location).attr("href","third.host");
 	});
 	  
 </script>

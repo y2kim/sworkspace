@@ -154,7 +154,7 @@ html, body {
 </style>
 </head>
 <body>
-	<div id="lys-redesign-div">
+	<div id="lys-redesign-div col-md-7 ">
 		<div data-hypernova-key="list_your_spacebundlejs"
 			data-hypernova-id="5a448c3f-0c91-45dc-8ea2-aeed82b9889b">
 			<div data-reactroot="">
@@ -202,11 +202,11 @@ html, body {
 									<div class="main-panel__actions col-sm-12 ">
 										<div class="_1dcqn1vg"
 											style="margin-top: 16px; margin-bottom: 16px; margin-left: 16px; margin-right: 16px">
-											<a href="/become-a-host" class="_5rte3y6" aria-busy="false"><span
+											<a href="/third.host" class="_5rte3y6" aria-busy="false"><span
 												class="_cgr7tc7"><span>뒤로</span></span></a>
 											   	
 											    
-												<button type="button" id="nextpg" disabled="" 
+												<button type="button" id="nextpg" disabled="disabled" 
 													class="_5rte3y6" aria-busy="false">
 													<span class="_cgr7tc7"><span>다음</span></span>
 												</button>
@@ -338,12 +338,25 @@ html, body {
 			}
 		}
 		
+		
 		var value01 = $("#lat").val();
 		var value02 = $("#lng").val();
+		var value03 = $("#town").val();
+		var value04 = $("#city").val();
 		
-		if(value01 != null && value02 != null){
-			$("#nextpg").attr("disabled",false);
+		if(value01 == null && value02 == null && value03 == null && value04 == null){
+			$("#nextpg").attr("disabled",true);
+		}else{
+			console.log(value01);
+			console.log(value02);
+			console.log(value03);
+			console.log(value04);
 		}
+		
+		$("#nextpg").click(function() {
+			$(location).attr("href","five.host");
+		});
+		
 		
 	</script>
 	<script

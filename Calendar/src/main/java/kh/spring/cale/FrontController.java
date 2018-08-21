@@ -41,8 +41,8 @@ import kh.spring.jsonbeans.Listcall;
 @Controller
 public class FrontController {
 	
-	
-	@RequestMapping(value = "/cals.do", method = RequestMethod.GET)
+
+/*	@RequestMapping(value = "/cals.do", method = RequestMethod.GET)
 	@ResponseBody
 	public  Map<String , Object> doC(@RequestParam("val") String val) {
 		System.out.println(val);
@@ -50,7 +50,7 @@ public class FrontController {
 		Map<String, Object> jsonObject = new HashMap<String, Object>();
 		jsonObject.put("data", value);
 		return jsonObject; 
-	}
+	}*/
 	
 /*	@RequestMapping(value = "/listrecall.do" , method = RequestMethod.POST )
 	public @ResponseBody ModelAndView ieste( @RequestParam("val") String id, HttpServletResponse response) throws Exception {
@@ -104,5 +104,18 @@ public @ResponseBody void home( @RequestParam("val") String id, HttpServletReque
 	new Gson().toJson(jarray, response.getWriter());
 
 }
+	
+	
+	@RequestMapping(value = "/textis.ho", method = RequestMethod.POST)
+	public @ResponseBody  void vone(@RequestParam("val") String val , HttpServletRequest request , HttpServletResponse response)throws Exception {
+		response.setCharacterEncoding("utf8");
+		response.setContentType("application/json");
+		String valuebulid = val;
+		JSONArray jarray = new JSONArray();
+		JSONObject json = new JSONObject();
+		json.put("vale", valuebulid);
+		jarray.add(valuebulid);
+		new Gson().toJson(jarray, response.getWriter());
+	}
 	
 }

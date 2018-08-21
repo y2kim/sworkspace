@@ -443,9 +443,9 @@
 					<div
 						class="right-backdrop hide-sm bg-white right-backdrop--with-bg"></div>
 					<div class="list-your-space__content">
-						<div class="centered-content clearfix">
+						<div class="centered-content clearfix col-md-7">
 							<div
-								class="main-panel-container no-padding-h bg-white main-panel-outer-half clearfix">
+								class="main-panel-container no-padding-h bg-white main-panel-outer-half clearfix ">
 								<div
 									class="main-panel main-panel-padding main-panel-progress pull-right main-panel-inner-half space-sm-8">
 									<div class="_1mbllh6j">
@@ -1073,10 +1073,10 @@
 													class="main-panel__actions col-sm-12 no-margin-padding__sm">
 													<div class="_1dcqn1vg"
 														style="margin-top: 16px; margin-bottom: 16px; margin-left: 16px; margin-right: 16px">
-														<a href="/become-a-host/room" class="_5rte3y6"
+														<a href="/second.host" class="_5rte3y6"
 															aria-busy="false"><span class="_cgr7tc7"><span>뒤로</span></span></a>
 														<div class="_107ja4p">
-															<button type="button" class="_5rte3y6" aria-busy="false"
+															<button type="button" class="_5rte3y6" aria-busy="false" id="nextpg"
 																data-veloute="lys-next-button">
 																<span class="_cgr7tc7"><span>다음</span></span>
 															</button>
@@ -1371,6 +1371,11 @@
 				$("#bathroomup").attr("disabled",true);
 			}
 		});
+		
+		$("#nextpg").click(function() {
+			$(location).attr("href","fore.host");
+		});
+		
 	</script>
 </body>
 </html>
