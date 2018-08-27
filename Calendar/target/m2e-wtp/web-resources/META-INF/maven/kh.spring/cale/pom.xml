@@ -21,6 +21,7 @@
 		</repository>
 	</repositories>
 	
+	
 	<dependencies>
 		<!-- Spring -->
 		<dependency>
@@ -129,6 +130,12 @@
 			<artifactId>mybatis-spring</artifactId>
 			<version>1.2.2</version>
 		</dependency>
+		<!-- 자바 버전이 낮은 경우 이거 있어야 session이  동작함  -->
+		<dependency>
+	<groupId>javax</groupId>
+	<artifactId>javaee-api</artifactId>
+	<version>7.0</version>
+	</dependency>
 		
 		<!-- oracle -->
 		<dependency>
@@ -171,6 +178,14 @@
     <artifactId>gson</artifactId>
     <version>2.3.1</version>
 	</dependency>
+	
+	<dependency>
+    <groupId>jstl</groupId>
+    <artifactId>jstl</artifactId>
+    <version>1.2</version>
+	</dependency>
+	
+	
 	
 	<!-- json-simple -->	
 		<dependency>

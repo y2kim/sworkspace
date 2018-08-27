@@ -92,6 +92,13 @@
 		</dependency>
 		
 		
+		<dependency>
+    <groupId>jstl</groupId>
+    <artifactId>jstl</artifactId>
+    <version>1.2</version>
+	</dependency>
+		
+		
 		<!-- JDBC Oracle -->
 		<dependency>
 			<groupId>org.springframework</groupId>
