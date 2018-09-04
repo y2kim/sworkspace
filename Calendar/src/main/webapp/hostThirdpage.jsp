@@ -446,7 +446,7 @@
 						<div class="centered-content clearfix col-md-7">
 						<form id="bedbath" action="foreMove.host" method="post">
 							<div
-								class="main-panel-container no-padding-h bg-white main-panel-outer-half clearfix ">
+								class="main-panel-container no-padding-h bg-white main-panel-outer-half clearfix col-md-8 col-md-offset-1">
 								<div
 									class="main-panel main-panel-padding main-panel-progress pull-right main-panel-inner-half space-sm-8">
 									<div class="_1mbllh6j">

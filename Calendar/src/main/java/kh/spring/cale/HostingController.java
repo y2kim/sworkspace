@@ -67,7 +67,7 @@ public class HostingController {
 	public ModelAndView toMoveThird(HomeDTO hdto,HttpSession session,HttpServletRequest req,HttpServletResponse res) {
 		System.out.println("home_type수정 과 세번째 페이지 이동");
 		ModelAndView mav = new ModelAndView();
-		String home_type = req.getParameter("home_type");
+		String home_type = req.getParameter("room_type");
 		int seq = Integer.parseInt(req.getSession().getAttribute("hostingseq").toString());
 		System.out.println(seq);
 		System.out.println(home_type);
@@ -173,7 +173,7 @@ public class HostingController {
 			}
 
 		} catch (Exception e) {
-			amenitiesList = null;
+			amenitiesList = "없음";
 		}
 
 		try {
@@ -185,7 +185,7 @@ public class HostingController {
 				}
 			}	
 		} catch (Exception e) {
-			safetyList = null;
+			safetyList = "없음";
 		}
 
 		System.out.println(amenitiesList + ":" +safetyList );
@@ -287,7 +287,7 @@ public class HostingController {
 		}
 		mav.addObject("result",result);
 		//mav.addObject("result2",result2);
-		mav.setViewName("step2third.host");
+		mav.setViewName("step2HostThirdpage.jsp");
 		return mav;
 	}
 
@@ -324,11 +324,12 @@ public class HostingController {
 
 	@RequestMapping("/gostep3second.host")
 	public ModelAndView Step3SecondMove(@RequestParam(value="home_guest_access", required=false) List<String>home_guest_access,@RequestParam(value="home_rules", required=false) List<String>home_rules,
-			HttpSession session,HttpServletRequest req,HttpServletResponse res) {
+			@RequestParam(value="addon", required=false) List<String>addon,HttpSession session,HttpServletRequest req,HttpServletResponse res) {
 		System.out.println("이름  수정 스텝3 페이지2 이동  ");
 		ModelAndView mav = new ModelAndView();
 		List<String> homeguestaccess = home_guest_access;
 		List<String> homerules = home_rules;
+		List<String> addons = addon;
 		String homename = req.getParameter("home_name");
 		//int seq = Integer.parseInt(req.getSession().getAttribute("hostingseq").toString());
 		//System.out.println(seq);
@@ -349,16 +350,20 @@ public class HostingController {
 
 		try {
 			for(int i=0;i<homerules.size();i++){
-				if(i<homerules.size()-1){
-					rulesList += homerules.get(i)+",";
-				}else{
-					rulesList += homerules.get(i);
-				}
+				//for(int j=0;j<addons.size();j++){
+					
+					if(i<homerules.size()-1){
+						rulesList += homerules.get(i) +" : ";
+						rulesList += addons.get(i)+",";
+					}else{
+						rulesList += homerules.get(i) +" : ";
+						rulesList += addons.get(i);
+					}
+				//}
 			}	
 		} catch (Exception e) {
 			rulesList = null;
 		}
-
 		HomeDTO homedto = new HomeDTO();
 		//homedto.setHome_seq(seq);
 		System.out.println(guestaccessList+":"+rulesList);
@@ -419,14 +424,30 @@ public class HostingController {
 	@RequestMapping("/step3fore.host")
 	public String Step3Forth() {
 		//string <- 스프링이 해석함 
-		return "step3HostForthpage.jsp";
+		return "step3HostFour.jsp";
 	}
 
 	@RequestMapping("/gostep3five.host")
-	public ModelAndView Step3FiveMove(@RequestParam(value="home_blocked_date", required=false) List<String>home_blocked_date,
-			HttpSession session,HttpServletRequest req,HttpServletResponse res) throws Exception {
+	public ModelAndView Step3FiveMove(HttpSession session,HttpServletRequest req,HttpServletResponse res) throws Exception {
 		ModelAndView mav = new ModelAndView();
-
+		String homeblockeddate=req.getParameter("home_blocked_date");
+		System.out.println("!!!!!!");
+		System.out.println(homeblockeddate);
+		List<String> blockeddate = new ArrayList<>();
+		String[] splited = homeblockeddate.split("\\,");
+		System.out.println(splited.length);
+		String blockeddateList ="";
+		for(int i=0;i<splited.length;i++){
+			blockeddate.add(i, splited[i]);
+		}
+		for(int i=0;i<blockeddate.size();i++){
+			if(i<blockeddate.size()-1){
+				blockeddateList += blockeddate.get(i)+",";
+			}else{
+				blockeddateList += blockeddate.get(i);
+			}
+		}
+		System.out.println(blockeddateList);
 		HomeDTO homedto = new HomeDTO();
 		//homedto.setHome_seq(seq);
 

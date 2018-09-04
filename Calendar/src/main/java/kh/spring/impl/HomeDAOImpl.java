@@ -88,7 +88,7 @@ public class HomeDAOImpl implements HomeDAO {
 		return jdbcTemplate.update(sql,hdto.getHome_rules(), hdto.getHome_details(), hdto.getHome_seq());
 	}
 	
-	//
+	//---찬연
 	
 	@Override
 	public int insertFirstHome(HomeDTO hdto) {

@@ -28,7 +28,7 @@ public interface HomeDAO {
 	
 	public int modifyHomeRulesDetails(HomeDTO hdto);
 	
-	//1step
+	//1찬연
 	public int insertFirstHome(HomeDTO hdto);
 	
 	public HomeDTO getNewestHomeData();

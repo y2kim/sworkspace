@@ -8,7 +8,7 @@
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<link rel="stylesheet" type="text/css" href="resources/hosting.css">
+<link rel="stylesheet" type="text/css" href="resources/css/hosting/hosting.css">
 <style type="text/css">
 #housename{
 	height: 67px;
@@ -24,6 +24,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 	<div data-hypernova-key="list_your_spacebundlejs"
 		data-hypernova-id="62050424-501d-4e76-9922-995555779dfd">
 		<div dir="ltr" data-reactroot="">

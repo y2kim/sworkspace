@@ -154,8 +154,9 @@ html, body {
 </style>
 </head>
 <body>
+
 <form action="pagegofive.host" id="modifymap" method="post">
-	<div id="lys-redesign-div col-md-7 ">
+	<div id="lys-redesign-div ">
 		<div data-hypernova-key="list_your_spacebundlejs"
 			data-hypernova-id="5a448c3f-0c91-45dc-8ea2-aeed82b9889b">
 			<div data-reactroot="">
@@ -169,7 +170,8 @@ html, body {
 				<div class="progress-bar__container">
 								<div class="progress-section progress-bar__placeholder"></div>
 							</div>
-							
+					<div class="col-md-6 col-md-offset-2">
+					
 				<br><label>국가/지역</label> <input type="text" id="contry"
 					placeholder="ex)대한민국" name="home_nation"> <br> <label>시/군</label>
 				<input type="text" id="town" placeholder="시/도/구" name="home_addr1">
@@ -180,9 +182,9 @@ html, body {
 					type="text" id="address2" placeholder="ex) 19층 102호"
 					name="home_addr4"> <br> <label>위도</label> <input
 					type="text" id="lat" placeholder="위도" name="home_lat"
-					disabled="disabled"> <br> <label>경도</label> <input
+					readonly="readonly"> <br> <label>경도</label> <input
 					type="text" id="lng" placeholder="경도" name="home_lng"
-					disabled="disabled"> <br>
+					readonly="readonly"> <br>
 
 				<div class="pac-card" id="pac-card">
 					<div>
@@ -220,19 +222,19 @@ html, body {
 						</div>
 					</div>
 				</div>
-
+				</div>
 			</div>
 		</div>
 	</div>
 
 
-	<div id="map"></div>
+</form>
+	<div id="map"  class="col-md-6 col-md-offset-2"></div>
 	<div id="infowindow-content">
 		<img src="" width="16" height="16" id="place-icon"> <span
 			id="place-name" class="title"></span><br> <span
 			id="place-address"></span>
 	</div>
-</form>
 	<script type="text/javascript">
 		function initMap() {
 			var map = new google.maps.Map(document.getElementById('map'), {

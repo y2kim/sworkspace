@@ -9,8 +9,8 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="resources/js/bootstrap-checkbox.js"></script>
-<link rel="stylesheet" type="text/css" href="resources/hosting.css">
-<link rel="stylesheet" type="text/css" href="resources/thirdhost.css">
+<link rel="stylesheet" type="text/css" href="resources/css/hosting/hosting.css">
+<link rel="stylesheet" type="text/css" href="resources/css/hosting/thirdhost.css">
 <title>Insert title here</title>
 <style type="text/css">
 .checkmark {
@@ -23,6 +23,7 @@
 </style>
 </head>
 <body>
+
 	<div data-hypernova-key="list_your_spacebundlejs"
 		data-hypernova-id="76626b4a-5a29-425c-afa9-06b28b9eb501">
 		<div dir="ltr" data-reactroot="">
@@ -96,7 +97,7 @@
 						<div class="list-your-space__content">
 							<div class="centered-content clearfix">
 								<div
-									class="main-panel-container no-padding-h bg-white main-panel-outer-half clearfix">
+									class="main-panel-container no-padding-h bg-white main-panel-outer-half clearfix col-md-4 col-md-offset-2">
 									<form action="gostep3second.host" id="rule" method="post">
 									<div
 										class="main-panel main-panel-padding main-panel-progress main-panel-inner-half space-sm-8">
@@ -555,6 +556,81 @@
 				$("#pet").after("");
 			}
 		});
+		
+		$("#requires_stairs").click( function(){
+			   if( $("#requires_stairs").is(':checked') ){ 
+				$("#requires_stairs").after("<input type=\"text\" name=\"addon\" value=\"\" id=\"staired\">");
+			   }else{
+				$("#staired").remove();	   
+			   }
+		});
+		
+		$("#potential_noise").click( function(){
+			   if( $("#potential_noise").is(':checked') ){ 
+				$("#potential_noise").after("<input type=\"text\" name=\"addon\" value=\"\" id=\"noise\">");
+			   }else{
+				$("#noise").remove();	   
+			   }
+		});
+		
+		$("#has_pets").click( function(){
+			   if( $("#has_pets").is(':checked') ){ 
+				$("#has_pets").after("<input type=\"text\" name=\"addon\" value=\"\" id=\"petsdo\">");
+			   }else{
+				$("#petsdo").remove();	   
+			   }
+		});
+		
+		$("#limited_parking").click( function(){
+			   if( $("#limited_parking").is(':checked') ){ 
+				$("#limited_parking").after("<input type=\"text\" name=\"addon\" value=\"\" id=\"parking\">");
+			   }else{
+				$("#parking").remove();	   
+			   }
+		});
+		
+		$("#shared_spaces").click( function(){
+			   if( $("#shared_spaces").is(':checked') ){ 
+				$("#shared_spaces").after("<input type=\"text\" name=\"addon\" value=\"\" id=\"spaces\">");
+			   }else{
+				$("#spaces").remove();	   
+			   }
+		});
+		
+		$("#limited_amenities").click( function(){
+			   if( $("#limited_amenities").is(':checked') ){ 
+				$("#limited_amenities").after("<input type=\"text\" name=\"addon\" value=\"\" id=\"amenities\">");
+			   }else{
+				$("#amenities").remove();	   
+			   }
+		});
+		
+		$("#surveillance").click( function(){
+			   if( $("#surveillance").is(':checked') ){ 
+				$("#surveillance").after("<input type=\"text\" name=\"addon\" value=\"\" id=\"camera\">");
+			   }else{
+				$("#camera").remove();	   
+			   }
+		});
+		
+		$("#weapons").click( function(){
+			   if( $("#weapons").is(':checked') ){ 
+				$("#weapons").after("<input type=\"text\" name=\"addon\" value=\"\" id=\"killed\">");
+			   }else{
+				$("#killed").remove();	   
+			   }
+		});
+		
+		$("#animals").click( function(){
+			   if( $("#animals").is(':checked') ){ 
+				$("#animals").after("<input type=\"text\" name=\"addon\" value=\"\" id=\"cation\">");
+			   }else{
+				$("#cation").remove();	   
+			   }
+		});
+		
+		
+		
 		
 		$("#nextpg").click(function() {
 			//$(location).attr("href","step2third.host");

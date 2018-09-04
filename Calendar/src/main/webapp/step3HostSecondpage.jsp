@@ -8,8 +8,8 @@
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<link rel="stylesheet" type="text/css" href="resources/css/hosting.css">
-<link rel="stylesheet" type="text/css" href="resources/css/cals.css">
+<link rel="stylesheet" type="text/css" href="resources/css/hosting/hosting.css">
+<link rel="stylesheet" type="text/css" href="resources/css/hosting/cals.css">
 <title>Insert title here</title>
 <style type="text/css">
 ._1f6bwyr7 {
@@ -48,6 +48,7 @@
 </style>
 </head>
 <body>
+
 <div data-hypernova-key="list_your_spacebundlejs"
 		data-hypernova-id="87ba3090-9aed-4901-9a21-3562df177027">
 		<div dir="ltr" data-reactroot="">

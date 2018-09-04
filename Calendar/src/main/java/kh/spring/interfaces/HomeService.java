@@ -28,7 +28,7 @@ public interface HomeService {
 
 	public int modifyCalendar(HomeDTO hdto);
 	
-	//1step
+	//찬연
 	public int insertFirstHome(HomeDTO hdto);
 	
 	public HomeDTO getNewestHomeData();

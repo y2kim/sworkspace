@@ -35,12 +35,12 @@
 	<!-- 추가 -->
 	
 	<insert id="firststepbyone" parameterType="Home">
-		insert into home value (home_seq,member_email) values (homeseq.nextval,'임시')
+		insert into home value (home_seq,member_email) values (homeseq.nextval,'어쩌다')
 	</insert>
 	
 	<select id="getNesestHomeData" resultType="Home">
 		select * from (select
-		* from home order by home_seq desc) where rownum = 1
+		* from home where member_email = #{member_email} order by home_seq desc) where rownum = 1
 	</select>
 	<!-- #{member_email} -->
 	<!-- all modify  -->

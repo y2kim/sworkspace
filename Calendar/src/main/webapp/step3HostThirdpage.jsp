@@ -230,6 +230,7 @@
 </style>
 </head>
 <body>
+
 	<div data-hypernova-key="list_your_spacebundlejs"
 		data-hypernova-id="0d09f05f-633c-43b7-b450-fd45d7a5267f">
 		<div dir="ltr" data-reactroot="">
@@ -294,16 +295,16 @@
 																<div
 																	class="increment-btn__border-container-label text-truncated">
 																	<input type="number" class="increment-btn__input" name="home_min_stay"
-																		id="min_nights_input_value" maxlength="4" value="0"><span
+																		id="min_nights_input_value" maxlength="3" value="0"><span
 																		class="text-muted"><span>박(최소)</span></span>
 																</div>
 															</div>
-															<button type="button"
-																class="btn btn-jumbo increment-btn__decrementer"
+															<button type="button" id="minmin"
+																class="btn btn-jumbo increment-btn__decrementer" 
 																aria-label="minus 1" disabled="">
 																<div class="increment-btn__border-container-decrementer"></div>
 															</button>
-															<button type="button"
+															<button type="button" id="minmax"
 																class="btn btn-jumbo increment-btn__incrementer increment-btn__incrementer"
 																aria-label="plus 1"></button>
 														</div>
@@ -323,16 +324,16 @@
 																<div
 																	class="increment-btn__border-container-label text-truncated">
 																	<input type="number" class="increment-btn__input" name="home_max_stay"
-																		id="max_nights_input_value" maxlength="4" value="0"><span
+																		id="max_nights_input_value" maxlength="3" value="0"><span
 																		class="text-muted"><span>박(최대)</span></span>
 																</div>
 															</div>
-															<button type="button"
+															<button type="button" id="maxmin"
 																class="btn btn-jumbo increment-btn__decrementer"
 																aria-label="minus 1" disabled="">
 																<div class="increment-btn__border-container-decrementer"></div>
 															</button>
-															<button type="button"
+															<button type="button" id="maxmax"
 																class="btn btn-jumbo increment-btn__incrementer increment-btn__incrementer"
 																aria-label="plus 1"></button>
 														</div>
@@ -428,11 +429,62 @@
 			var minsleep = $("#min_nights_input_value").val();
 			if(minsleep>365){
 				alert("limet");
+				$("#min_nights_input_value").val("365");
 			}
 		});
 		$("#max_nights_input_value").keypress(function() {
 		   var maxsleep = $("#max_nights_input_value").val();
-			
+
+		});
+		
+		$("#minmin").click(function() {
+			var minsleep = $("#min_nights_input_value").val();
+			if(minsleep>1){
+				minsleep = minsleep-1;
+				$("#min_nights_input_value").val(minsleep);
+				$("#minmax").attr("disabled",false);
+			}else{
+				$("#minmin").attr("disabled",true);
+				$("#min_nights_input_value").val(0);
+			}
+		});
+		
+		$("#minmax").click(function() {
+			var minsleep = $("#min_nights_input_value").val();
+			if(minsleep < 365 ){
+				minsleep = minsleep + 1; 
+				$("#min_nights_input_value").val(minsleep);
+				$("#minmin").attr("disabled",false);
+				
+			}else if(intmax = 365){
+				$("#minmax").attr("disabled",true);
+				$("#min_nights_input_value").val(minsleep)
+			}
+		});
+		/* ----------------- */
+		$("#maxmin").click(function() {
+			var maxsleep = $("#max_nights_input_value").val();
+			if(maxsleep>1){
+				maxsleep = maxsleep-1;
+				$("#max_nights_input_value").val(maxsleep);
+				$("#maxmax").attr("disabled",false);
+			}else{
+				$("#maxmin").attr("disabled",true);
+				$("#min_nights_input_value").val(0);
+			}
+		});
+		
+		$("#maxmax").click(function() {
+			var maxsleep = $("#max_nights_input_value").val();
+			if(maxsleep < 365 ){
+				maxsleep = maxsleep + 1; 
+				$("#max_nights_input_value").val(maxsleep);
+				$("#maxmin").attr("disabled",false);
+				
+			}else if(intmax = 365){
+				$("#maxmax").attr("disabled",true);
+				$("#max_nights_input_value").val(maxsleep)
+			}
 		});
 		
  		$("#nextpg").click(function() {
